@@ -4,6 +4,7 @@ logfile="/mnt/log/admin/housekeeping.log"
 targetdir="/mnt/log/"
 startime=$(date)
 echo "========================================================================" >> $logfile
+#set to 60 minutes, change -mmin +x accordingly
 echo "archiving compressed catalina.out on $startime" >> $logfile
 for y in `find $workdir -type f -mmin +60 -name "catalina.out*gz"`
 do
